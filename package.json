@@ -2,6 +2,9 @@
   "name": "musify",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.16.0"
+  },
   "dependencies": {
     "query-string": "^6.5.0",
     "react": "^16.8.6",
