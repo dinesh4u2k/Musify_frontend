@@ -1,7 +1,7 @@
-import React, { Components } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
-class Gallery extends Components{
+class Gallery extends Component{
     render(){
         const { tracks } = this.props;
         return(
