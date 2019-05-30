@@ -60,10 +60,10 @@ body{
     
 }
 
-.track.text{
+.track-text{
     background-color: #000;
-    color: #000;
-    /* opacity: 0.75; */
+    color: #fff;
+    opacity: 0.75;
     width:214px;
     margin-left: 3px;
     text-align: center;
