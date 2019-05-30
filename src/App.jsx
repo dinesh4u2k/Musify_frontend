@@ -12,7 +12,7 @@ class App extends Component{
             artist: null
         }
         const params = this.getHashParams();
-        console.log('tokennnnnn',params.access_token);
+        console.log('tokennnnnn',params.value);
     }
 
     getHashParams() {
