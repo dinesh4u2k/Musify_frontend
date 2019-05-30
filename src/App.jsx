@@ -7,18 +7,20 @@ class App extends Component{
 
     constructor(props){
         super(props);
+        
+       
         this.state={
             ArtistName:'',
             artist: null
         }
+        
         // const params = this.getHashParams();
         // console.log('tokennnnnn',params);
     }
 
-    componentDidMount(){
-        let parsed = queryString.parse(window.location.search);
-        console.log('token:',parsed);
-    }
+    // componentDidMount(){
+        
+    // }
 
     // getHashParams() {
     //     var hashParams = {};
@@ -33,11 +35,13 @@ class App extends Component{
     //   }
 
     Search(){
+        let parsed = queryString.parse(window.location.search);
         console.log('this state', this.state);
         const BaseUrl = 'https://api.spotify.com/v1/search?';
         const FetchUrl = `${BaseUrl}q=${this.state.ArtistName}&type=artist&limit=1`;
-        let accesstoken = 'BQBMlk1fu3KVOV_gNeMigSoGCIzzIunCRjIxrev1wu5QuP_CxrpceG6bzl1oPevGR1G6QHYsHUqTKwHEw-h9sUKFPT970frykmFTUMLfj86PlruazQ_clZ5ulWukyBeQrX5v34UaL8kfC5c4FO1ZNG0c2uO-Pt2tySfRPH2Wt3NSz4oqHPrKSGu_';
+        let accesstoken = parsed.access_token;
         console.log('fetch url',FetchUrl);
+        console.log('Access token',accesstoken);
         // fetch(FetchUrl,{
         //     method:'GET',
         //     headers:{
