@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap';
 import queryString from 'query-string';
-
+import Profile from './Profile';
 class App extends Component{
 
     constructor(props){
@@ -102,11 +102,9 @@ class App extends Component{
                 </FormGroup>
 
             
-                <div className="Profile">
-                    <div>Singer Picture</div>
-                     <div>Singer Name</div>
-            
-                </div>
+                <Profile 
+                    artist={this.state.artist}
+                />
 
                 <div className="Gallery">Gallery</div>
             
