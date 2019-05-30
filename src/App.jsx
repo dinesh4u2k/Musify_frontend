@@ -3,6 +3,7 @@ import './App.css';
 import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap';
 import queryString from 'query-string';
 import Profile from './Profile';
+import Gallery from './Gallery';
 class App extends Component{
 
     constructor(props){
@@ -113,7 +114,10 @@ class App extends Component{
                          artist={this.state.artist}
                          />
 
-                        <div className="Gallery">Gallery</div>
+                        <Gallery 
+                            tracks={this.state.tracks}
+                        
+                        />
 
                     </div>
 
