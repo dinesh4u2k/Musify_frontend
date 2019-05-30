@@ -71,15 +71,7 @@ class App extends Component{
     }
 
     render(){
-        let artist = {
-            name: '',
-            followers: {
-              total: ''
-            }
-          };
-          if (this.state.artist !== null) {
-            artist = this.state.artist;
-          }
+       
         return(
             <div className="App">
                 <div className="title">Musify</div>
