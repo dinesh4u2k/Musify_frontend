@@ -30,6 +30,7 @@ class Profile extends Component{
                         genre = genre !== artist.genres[artist.genres.length-1] ? `${genre},` : `& ${genre}`;
                         return(
                             <span key={k}>{genre}</span>
+                            
                         )
                     })
 
