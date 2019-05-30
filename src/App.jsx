@@ -100,7 +100,7 @@ class App extends Component{
 
                 <div className="Gallery">Gallery</div>
             
-                <div>{artist.name}</div>
+                
             
             </div>
         )
