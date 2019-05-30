@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap';
-
+import queryString from 'query-string';
 
 class App extends Component{
 
@@ -11,21 +11,26 @@ class App extends Component{
             ArtistName:'',
             artist: null
         }
-        const params = this.getHashParams();
-        console.log('tokennnnnn',params);
+        // const params = this.getHashParams();
+        // console.log('tokennnnnn',params);
     }
 
-    getHashParams() {
-        var hashParams = {};
-        var e, r = /([^&;=]+)=?([^&;]*)/g,
-            q = window.location.hash.substring(1);
-        e = r.exec(q)
-        while (e) {
-           hashParams[e[1]] = decodeURIComponent(e[2]);
-           e = r.exec(q);
-        }
-        return hashParams;
-      }
+    componentDidMount(){
+        let parsed = queryString.parse(window.location.search);
+        console.log('token:',parsed);
+    }
+
+    // getHashParams() {
+    //     var hashParams = {};
+    //     var e, r = /([^&;=]+)=?([^&;]*)/g,
+    //         q = window.location.hash.substring(1);
+    //     e = r.exec(q)
+    //     while (e) {
+    //        hashParams[e[1]] = decodeURIComponent(e[2]);
+    //        e = r.exec(q);
+    //     }
+    //     return hashParams;
+    //   }
 
     Search(){
         console.log('this state', this.state);
